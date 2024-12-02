@@ -1,1 +1,10 @@
+# ignore all files that don't have an extension
+*
+!*.*
+!*/
+
+# ignore inputs
 *.txt
+
+# ignore cpp
+*.cpp
