@@ -6,5 +6,4 @@
 # ignore inputs
 *.txt
 
-# ignore cpp
-*.cpp
+.vscode
