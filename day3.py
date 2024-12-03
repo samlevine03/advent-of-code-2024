@@ -9,21 +9,18 @@ with open("day3.txt") as input_file:
     input = input_file.read()
     input = re.sub("\n", "", input)
 
-    matches = re.findall(r"mul\(\d{1,3},\d{1,3}\)", input)
+    matches = re.findall(r"mul\((\d{1,3}),(\d{1,3})\)", input)
 
-    def mult(match):
-        l, r = match.split(',')
-        l = l.split('(')[-1]
-        r = r.split(')')[0]
-        return int(l) * int(r)
+    def mult_match(match):
+        return int(match[0]) * int(match[1])
 
-    res1 = sum(map(mult, matches))
+    res1 = sum(map(mult_match, matches))
     print("res1", res1)
 
     input = re.sub(r"don't\(\).*?do\(\)", "", input)
 
-    matches = re.findall(r"mul\(\d{1,3},\d{1,3}\)", input)
-    res2 = sum(map(mult, matches))
+    matches = re.findall(r"mul\((\d{1,3}),(\d{1,3})\)", input)
+    res2 = sum(map(mult_match, matches))
     print("res2", res2)
 
     t1 = time.time()
