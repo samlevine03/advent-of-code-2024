@@ -1,3 +1,3 @@
 # Advent of Code 2024
 
-Only rule is no using AI no matter what. I'm very comfortable with Python, so I'm solving in Python first, and then giving a shot at translating my solution to C++ since I want to learn it and no nothing about it.
+Only rule is no using AI no matter what. I'm very comfortable with Python, so I'm solving in Python first, and then giving a shot at translating my solution to C++ since I want to learn it and no nothing about it. I don't really have an interest in making my Python code particularly efficient or readable (if you're curious what that effort looks like, check out my 2023 repo.). My goal is strictly to solve each day by any means necessary, and also to get familiar with C++'s standard library and syntax.
