@@ -6,10 +6,6 @@
 #include <unordered_map>
 using namespace std;
 
-bool comp(int a, int b) {
-    return a >= b;
-}
-
 int main() {
     string filename = "day1.txt";
     ifstream inputFile(filename);
