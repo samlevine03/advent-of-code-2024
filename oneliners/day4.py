@@ -1,11 +1,11 @@
 with open('../inputs/day4.txt') as f:
     matrix = [list(row) for row in f.read().split('\n')]
 
-def count_xmas(r, c, word='XMAS'):
+def count_xmas(r, c):
+    xmas = 'XMAS'
     return sum(
-        all(0 <= r + dr * i < len(matrix) and 0 <= c + dc * i < len(matrix[0]) and matrix[r + dr * i][c + dc * i] == word[i]
-            for i in range(1, len(word)))
-        for dr, dc in [(0, 1), (1, 0), (1, 1), (1, -1), (0, -1), (-1, 0), (-1, -1), (-1, 1)]
+        all(0 <= r + dr * i < len(matrix) and 0 <= c + dc * i < len(matrix[0]) and matrix[r + dr * i][c + dc * i] == xmas[i]
+            for i in range(1, len(xmas))) for dr in [-1,0,1] for dc in [-1,0,1]
     )
 
 ans1 = sum(count_xmas(r, c) for r in range(len(matrix)) for c in range(len(matrix[0])) if matrix[r][c] == 'X')
