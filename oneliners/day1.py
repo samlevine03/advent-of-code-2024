@@ -1,13 +1,7 @@
-llist = []
-rlist = []
-rmap = {}
+from collections import Counter
 
-with open("../inputs/day1.txt") as f:
-    for line in f:
-        l, r = map(int, line.split())
-        llist.append(l)
-        rlist.append(r)
-        rmap[r] = rmap.get(r, 0) + 1
+llist, rlist = zip(*((int(line.split()[0]), int(line.split()[1])) for line in open("../inputs/day1.txt").readlines()))
+rmap = Counter(rlist)
 
 ans1 = sum(abs(l - r) for l, r in zip(sorted(llist), sorted(rlist)))
 ans2 = sum(num * rmap.get(num, 0) for num in llist)
