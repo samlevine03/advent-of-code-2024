@@ -1,5 +1,4 @@
-with open('../inputs/day4.txt') as f:
-    matrix = [list(row) for row in f.read().split('\n')]
+matrix = [list(row) for row in open('../inputs/day4.txt').read().split('\n')]
 
 def count_xmas(r, c):
     xmas = 'XMAS'
