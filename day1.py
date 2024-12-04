@@ -3,7 +3,7 @@ right_list = []
 
 right_dict = {}
 
-with open("day1.txt") as input_file:
+with open("inputs/day1.txt") as input_file:
     for line in input_file.readlines():
         left, right = line.split()
         left = int(left)

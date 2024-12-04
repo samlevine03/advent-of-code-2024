@@ -3,7 +3,7 @@ import time
 res = 0
 res_2 = 0
 
-with open("day3.txt") as input_file:
+with open("inputs/day3.txt") as input_file:
     t0 = time.time()
 
     input = input_file.read()

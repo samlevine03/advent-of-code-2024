@@ -1,6 +1,6 @@
 reports = []
 
-with open("day2.txt") as input_file:
+with open("inputs/day2.txt") as input_file:
     for line in input_file.readlines():
         report = [int(x) for x in line.split()]
         reports.append(report)

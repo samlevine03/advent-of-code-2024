@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    string filename = "day1.txt";
+    string filename = "../inputs/day1.txt";
     ifstream inputFile(filename);
 
     // (not sure if i should use vector or lists)
