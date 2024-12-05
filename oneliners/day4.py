@@ -1,4 +1,4 @@
-matrix = [list(row) for row in open("../inputs/day4.txt").read().split("\n")]
+matrix = [list(row) for row in open("../inputs/day4.txt").read().splitlines()]
 
 def count_xmas(r, c):
     return sum(
@@ -8,8 +8,7 @@ def count_xmas(r, c):
             and matrix[r + dr * i][c + dc * i] == "XMAS"[i]
             for i in range(1, 4)
         )
-        for dr in [-1, 0, 1]
-        for dc in [-1, 0, 1]
+        for dr in [-1, 0, 1] for dc in [-1, 0, 1]
     )
 
 ans1 = sum(
