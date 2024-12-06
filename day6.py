@@ -41,7 +41,6 @@ visited = list(visited)
 
 obs = set()
 for i, (rr, cc) in enumerate(visited):
-    print(f"{i}/{len(visited)}")
     if (rr, cc) != (sx, sy) and matrix[rr][cc] == '.':
         tmp = matrix[rr][cc]
         matrix[rr][cc] = '#'
