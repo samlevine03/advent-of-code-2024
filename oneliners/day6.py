@@ -27,10 +27,8 @@ def traverse(matrix, sx, sy, dirs, ox=None, oy=None) -> tuple[dict, bool]: # (vi
     return visited, False
 
 visited, _ = traverse(matrix, sx, sy, dirs)
-ans1 = len(visited)
-ans2 = sum(
+print(len(visited))
+print(sum(
     traverse(matrix, sx, sy, dirs, ox, oy)[1] 
     for ox, oy in visited 
-)
-
-print(f"{ans1}\n{ans2}")
+))
