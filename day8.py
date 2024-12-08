@@ -4,12 +4,10 @@ with open('inputs/day8.txt') as f:
     m = [list(row.strip()) for row in f.readlines()]
 
 nodes = {}
-all_nodes = set()
 
 for r, row in enumerate(m):
     for c, n in enumerate(row):
         if n != '.':
-            all_nodes.add((r,c))
             if n in nodes:
                 nodes[n].add((r,c))
             else:
