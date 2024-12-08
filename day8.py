@@ -19,9 +19,9 @@ for node, points in nodes.items():
         dy, dx = p1[1] - p0[1], p1[0] - p0[0]
         p2 = (p1[0] + dx, p1[1] + dy)
         p3 = (p0[0] - dx, p0[1] - dy)
-        if p2[0] in range(len(m[0])) and p2[1] in range(len(m)):
+        if p2[0] in range(len(m)) and p2[1] in range(len(m[0])):
             antinodes.add(p2)
-        if p3[0] in range(len(m[0])) and p3[1] in range(len(m)):
+        if p3[0] in range(len(m)) and p3[1] in range(len(m[0])):
             antinodes.add(p3)
 
 print(len(antinodes))
@@ -34,10 +34,10 @@ for node, points in nodes.items():
         dy, dx = p1[1] - p0[1], p1[0] - p0[0]
         p2 = (p1[0] + dx, p1[1] + dy)
         p3 = (p0[0] - dx, p0[1] - dy)
-        while p2[0] in range(len(m[0])) and p2[1] in range(len(m)):
+        while p2[0] in range(len(m)) and p2[1] in range(len(m[0])):
             antinodes.add(p2)
             p2 = (p2[0] + dx, p2[1] + dy)
-        while p3[0] in range(len(m[0])) and p3[1] in range(len(m)):
+        while p3[0] in range(len(m)) and p3[1] in range(len(m[0])):
             antinodes.add(p3)
             p3 = (p3[0] - dx, p3[1] - dy)
 
