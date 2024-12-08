@@ -26,9 +26,6 @@ for node, points in nodes.items():
 
 print(len(antinodes))
 
-for r in m:
-    print("".join(r))
-
 antinodes = set()
 for node, points in nodes.items():
     for p0, p1 in combinations(points, 2):
