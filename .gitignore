@@ -3,6 +3,7 @@
 !*.*
 !*/
 !Makefile
+env
 
 # ignore inputs
 inputs
